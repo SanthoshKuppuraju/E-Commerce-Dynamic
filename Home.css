@@ -25,3 +25,67 @@
     border: 0px solid;
     border-radius: 10%;
 }
+
+/* For the cards under the Carosule */
+.cardsundercar {
+    display: flex;
+    background-color: rgb(244, 243, 243);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 45px;
+}
+
+.card {
+    height: 200px;
+    width: 300px;
+    border: 0px solid;
+    padding-top: 35px;
+    padding-right: 15px;
+    margin: 10px;
+    background-color: rgb(240, 219, 197);
+
+}
+
+.card img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* For Big Discount Part  */
+.bigdiscount {
+    margin: 50px 200px;
+}
+
+.bigdiscount h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bgproducts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+}
+
+.bgitems:hover {
+    box-shadow: 0px 0px 5px 2px rgb(138, 160, 216);
+    transform: scale(1.01);
+}
+
+.bgitems {
+    border: 0px solid;
+    box-shadow: 0px 0px 5px 2px rgb(219, 217, 217);
+    width: 300px;
+    height: 400px;
+    border-radius: 2%;
+}
+
+.bgproducts img {
+    margin-left: 20px;
+    width: 250px;
+    height: 250px;
+
+}
