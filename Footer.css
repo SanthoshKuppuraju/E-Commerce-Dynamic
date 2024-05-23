@@ -1,0 +1,109 @@
+.footer {
+    background-color: rgb(58, 58, 140);
+    color: white;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+
+
+}
+
+/* For the first content of the footer box */
+
+.footerdiv1 {
+    list-style: none;
+    width: 300px;
+    line-height: 30px;
+
+
+
+
+}
+
+.foot1 {
+    margin-left: 50px;
+}
+
+.foot1 li:hover {
+    color: aqua;
+}
+
+.foothead {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.foot1 img {
+    height: 40px;
+    position: relative;
+    top: 35px;
+    left: 25px;
+}
+
+/* For the second content of the footer box */
+.foot2 {
+    margin-top: 20px;
+}
+
+.foot2 ul li {
+    list-style: none;
+    line-height: 40px;
+
+}
+
+.foot2 ul li:hover {
+    color: aqua;
+    transform: scale(1.2);
+}
+
+.foot2head {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* For the Third  content of the footer box */
+.foot3head {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.foot3 ul li {
+    list-style: none;
+    line-height: 40px;
+
+}
+
+.foot3 {
+    margin-top: 30px;
+}
+
+.foot3 ul li:hover {
+    color: aqua;
+    transform: scale(1.2);
+}
+
+/* For the Third  content of the footer box */
+.foot4 {
+    width: 300px;
+}
+
+.foot4 ul li {
+    list-style: none;
+    line-height: 40px;
+}
+
+.foot4 ul li:hover {
+    color: aqua;
+}
+
+.foot4head {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.foot4 {
+    margin-top: 30px;
+    margin-right: 10px;
+}

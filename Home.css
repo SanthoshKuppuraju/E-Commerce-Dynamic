@@ -1,0 +1,27 @@
+/* For the carousel part  */
+.carousel {
+    height: 400px;
+
+}
+
+.cntofcarousel {
+    position: relative;
+    left: 200px;
+    bottom: 100px;
+    color: black;
+}
+
+
+
+.carosalimg {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    left: 100px;
+
+}
+
+.buttonofcarousel {
+    border: 0px solid;
+    border-radius: 10%;
+}

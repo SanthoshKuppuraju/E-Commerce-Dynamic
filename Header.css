@@ -1,0 +1,61 @@
+.header {
+    background-color: rgb(190, 190, 190);
+    height: 80px;
+
+    margin-bottom: 10px;
+
+
+
+}
+
+.logo {
+    height: 50px;
+    margin-top: 15px;
+    margin-left: 20px;
+
+}
+
+.header ul li {
+    position: relative;
+    bottom: 45px;
+    right: 20px;
+
+
+}
+
+.appname {
+
+
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    top: 13px;
+}
+
+
+
+
+
+
+.cartimg {
+    width: 30px;
+    height: 30px;
+    border-radius: 20%;
+    position: relative;
+    top: 5px;
+
+}
+
+.tolitmncrt {
+
+    height: 2px;
+    font-size: 11px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 16px;
+    padding-top: 0px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(41, 31, 144);
+    border: 1px solid rgb(41, 31, 144);
+}
