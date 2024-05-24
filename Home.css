@@ -29,7 +29,10 @@
 /* For the cards under the Carosule */
 .cardsundercar {
     display: flex;
-    background-color: rgb(244, 243, 243);
+    /* background-color: rgb(244, 243, 243); */
+    background-color: rgb(225,
+            231,
+            232);
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 45px;
@@ -67,6 +70,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    padding: 20px;
+
+
 
 }
 
@@ -79,13 +85,93 @@
     border: 0px solid;
     box-shadow: 0px 0px 5px 2px rgb(219, 217, 217);
     width: 300px;
-    height: 400px;
+    height: 450px;
     border-radius: 2%;
+    background-color: white;
 }
 
-.bgproducts img {
+.bgproductsimg {
     margin-left: 20px;
+    margin-top: 20px;
     width: 250px;
     height: 250px;
 
+
+
+}
+
+.bgproducts p {
+    display: inline;
+    color: white;
+    background-color: rgb(35, 26, 131);
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+
+}
+
+.bgproducts h5 {
+    margin-left: 20px;
+    margin-top: 10px;
+
+}
+
+.bgstarscontainer {
+    margin-left: 20px;
+}
+
+.bgproductsstar {
+    width: 30px;
+    height: 30px;
+
+}
+
+.bgitems button {
+    position: relative;
+    left: 230px;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding-top: -30px;
+    border: 0px solid white;
+    background-color: white;
+    color: rgb(35, 26, 131);
+    padding-bottom: 8px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 1px 1px rgb(232, 228, 228);
+
+
+}
+
+.bgitems button:hover {
+    color: white;
+    background-color: rgb(35, 26, 131);
+
+}
+
+/* For the New arraivalas  */
+/* For the card style i used all the same class name of the bigdiscount  */
+.newarrcontainer {
+    background-color: rgb(225, 231, 232);
+
+}
+
+.newarraivals {
+    margin: 50px 200px;
+    padding: 15px 0px;
+
+
+
+}
+
+.newarraivals h1 {
+    text-align: center;
+    margin-bottom: 50px;
 }

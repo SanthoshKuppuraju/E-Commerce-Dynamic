@@ -95,6 +95,7 @@ export const discoutProducts = [
     category: "sofa",
     price: 193,
     discount: 30,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -114,6 +115,7 @@ export const discoutProducts = [
     category: "sofa",
     price: 253,
     discount: 20,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -137,6 +139,7 @@ export const discoutProducts = [
     category: "chair",
     price: 89,
     discount: 15,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -160,6 +163,7 @@ export const discoutProducts = [
     category: "chair",
     price: 112,
     discount: 35,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -183,6 +187,7 @@ export const discoutProducts = [
     category: "mobile",
     price: 599,
     discount: 10,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -201,11 +206,12 @@ export const discoutProducts = [
   },
   {
     id: "13",
-    productName: "One Plus Nord",
+    productName: "Iphone 13 pro",
     imgUrl: phone04,
     category: "mobile",
     price: 799,
     discount: 5,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -231,6 +237,7 @@ export const products = [
     imgUrl: productImg01,
     category: "sofa",
     price: 193,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -250,6 +257,7 @@ export const products = [
     imgUrl: productImg02,
     category: "sofa",
     price: 253,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -273,6 +281,7 @@ export const products = [
     imgUrl: productImg03,
     category: "sofa",
     price: 173,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -295,6 +304,7 @@ export const products = [
     imgUrl: productImg02,
     category: "sofa",
     price: 253,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -317,6 +327,7 @@ export const products = [
     imgUrl: productImg04,
     category: "sofa",
     price: 163,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -340,6 +351,7 @@ export const products = [
     imgUrl: productImg05,
     category: "sofa",
     price: 163,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -363,6 +375,7 @@ export const products = [
     imgUrl: productImg06,
     category: "sofa",
     price: 163,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -385,6 +398,7 @@ export const products = [
     imgUrl: productImg07,
     category: "chair",
     price: 99,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -408,6 +422,7 @@ export const products = [
     imgUrl: productImg007,
     category: "sofa",
     price: 173,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -431,6 +446,7 @@ export const products = [
     imgUrl: productImg08,
     category: "chair",
     price: 89,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -454,6 +470,7 @@ export const products = [
     imgUrl: productImg09,
     category: "chair",
     price: 112,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -477,6 +494,7 @@ export const products = [
     imgUrl: phone01,
     category: "mobile",
     price: 799,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -499,6 +517,7 @@ export const products = [
     imgUrl: productImg10,
     category: "chair",
     price: 99,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -521,6 +540,7 @@ export const products = [
     imgUrl: phone02,
     category: "mobile",
     price: 799,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -544,6 +564,7 @@ export const products = [
     imgUrl: phone03,
     category: "mobile",
     price: 599,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -567,6 +588,7 @@ export const products = [
     imgUrl: phone04,
     category: "mobile",
     price: 799,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -590,6 +612,7 @@ export const products = [
     imgUrl: phone05,
     category: "mobile",
     price: 899,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -613,6 +636,7 @@ export const products = [
     imgUrl: phone06,
     category: "mobile",
     price: 699,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -636,6 +660,7 @@ export const products = [
     imgUrl: watch01,
     category: "watch",
     price: 299,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -659,6 +684,7 @@ export const products = [
     imgUrl: watch02,
     category: "watch",
     price: 299,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -682,6 +708,7 @@ export const products = [
     imgUrl: watch03,
     category: "watch",
     price: 299,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -705,6 +732,7 @@ export const products = [
     imgUrl: watch04,
     category: "watch",
     price: 399,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -728,6 +756,7 @@ export const products = [
     imgUrl: wireless01,
     category: "wireless",
     price: 199,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -751,6 +780,7 @@ export const products = [
     imgUrl: wireless03,
     category: "wireless",
     price: 199,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -773,6 +803,7 @@ export const products = [
     imgUrl: wireless02,
     category: "wireless",
     price: 169,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -795,6 +826,7 @@ export const products = [
     imgUrl: wireless04,
     category: "wireless",
     price: 139,
+    star: "https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-256.png",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:

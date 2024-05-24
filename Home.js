@@ -6,13 +6,21 @@ import Carousel from "react-bootstrap/Carousel";
 import { SliderData } from "./Product.js";
 import { serviceData } from "./Product.js";
 import { discoutProducts } from "./Product.js";
+import { products } from "./Product.js";
 
 const Home = () => {
+  // for carosal function
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
+  // Filtering the data for the new arraivals :
+  const newArraivals = products.filter(
+    (item) => item.category == "mobile" || item.category == "wireless"
+  );
+  // Filtering the data for the best Sales
+  const bestSales = products.filter((item) => item.category == "sofa");
 
   return (
     <>
@@ -58,7 +66,65 @@ const Home = () => {
           <div className="bgproducts">
             {discoutProducts.map((item) => (
               <div className="bgitems">
-                <img src={item.imgUrl} />
+                <p>{item.discount}% Off</p>
+                <img src={item.imgUrl} className="bgproductsimg" />
+                <h5>{item.productName}</h5>
+                <div className="bgstarscontainer">
+                  <img src={item.star} className="bgproductsstar" />
+                  <img src={item.star} className="bgproductsstar" />
+                  <img src={item.star} className="bgproductsstar" />
+                  <img src={item.star} className="bgproductsstar" />
+                  <img src={item.star} className="bgproductsstar" />
+                </div>
+                <h5>INR: {item.price}</h5>
+
+                <button>+</button>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* New Arrivals  */}
+        <div className="newarrcontainer">
+          <div className="newarraivals">
+            <h1>New Arraivals </h1>
+            <div className="bgproducts">
+              {newArraivals.map((item) => (
+                <div className="bgitems">
+                  <img src={item.imgUrl} className="bgproductsimg" />
+                  <h5>{item.productName}</h5>
+                  <div className="bgstarscontainer">
+                    <img src={item.star} className="bgproductsstar" />
+                    <img src={item.star} className="bgproductsstar" />
+                    <img src={item.star} className="bgproductsstar" />
+                    <img src={item.star} className="bgproductsstar" />
+                    <img src={item.star} className="bgproductsstar" />
+                  </div>
+                  <h5>INR: {item.price}</h5>
+
+                  <button>+</button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Best sales */}
+        <div className="bigdiscount">
+          <h1>Best Sales</h1>
+          <div className="bgproducts">
+            {bestSales.map((item) => (
+              <div className="bgitems">
+                <img src={item.imgUrl} className="bgproductsimg" />
+                <h5>{item.productName}</h5>
+                <div className="bgstarscontainer">
+                  <img src={item.star} className="bgproductsstar" />
+                  <img src={item.star} className="bgproductsstar" />
+                  <img src={item.star} className="bgproductsstar" />
+                  <img src={item.star} className="bgproductsstar" />
+                  <img src={item.star} className="bgproductsstar" />
+                </div>
+                <h5>INR: {item.price}</h5>
+
+                <button>+</button>
               </div>
             ))}
           </div>
