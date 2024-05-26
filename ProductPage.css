@@ -1,0 +1,17 @@
+/* for the header portion of the page */
+
+.headerportion img {
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    height: 250px;
+    opacity: 0.6;
+
+}
+
+.headerportion h1 {
+    text-align: center;
+    position: relative;
+    bottom: 185px;
+
+}

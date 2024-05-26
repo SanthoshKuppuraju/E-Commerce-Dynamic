@@ -7,6 +7,7 @@ import { SliderData } from "./Product.js";
 import { serviceData } from "./Product.js";
 import { discoutProducts } from "./Product.js";
 import { products } from "./Product.js";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   // for carosal function
@@ -67,7 +68,9 @@ const Home = () => {
             {discoutProducts.map((item) => (
               <div className="bgitems">
                 <p>{item.discount}% Off</p>
-                <img src={item.imgUrl} className="bgproductsimg" />
+                <Link to={`/productpage/${item.id}`}>
+                  <img src={item.imgUrl} className="bgproductsimg" />
+                </Link>
                 <h5>{item.productName}</h5>
                 <div className="bgstarscontainer">
                   <img src={item.star} className="bgproductsstar" />
@@ -129,12 +132,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-
-        {/*  */}
-        {/*  */}
-        {/*  */}
-        {/*  */}
-        {/*  */}
+        {/* Added footer component to the home page */}
         <Footer />
       </div>
     </>
