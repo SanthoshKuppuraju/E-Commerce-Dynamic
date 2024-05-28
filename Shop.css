@@ -1,0 +1,80 @@
+.shopheader h1 {
+
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 185px;
+}
+
+.shopheader img {
+    position: relative;
+    bottom: 10px;
+    width: 100%;
+    height: 250px;
+}
+
+
+
+.catagerydropdown {
+    margin-left: 200px;
+    padding: 10px;
+    background-color: rgb(35, 26, 131);
+    color: white;
+    border-radius: 5px;
+
+}
+
+.catagerydropdown option {
+    background-color: rgb(253, 253, 253);
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    height: 100px;
+
+
+
+}
+
+
+
+.catagerydropdown option:hover {
+    background-color: rgb(35, 26, 131);
+    color: white;
+}
+
+.intermediateline {
+    margin-top: 10px;
+    position: absolute;
+    left: 342px;
+    color: white;
+}
+
+.searchbar {
+    position: relative;
+    left: 350px;
+    bottom: 43px;
+    padding: 2px;
+    margin-left: 300px;
+    width: 500px;
+
+}
+
+.searchbar input {
+
+    width: 650px;
+    border-radius: 20px;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(130, 130, 130);
+    padding: 5px 50px 5px 15px;
+
+
+}
+
+
+
+.searchbar img {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 615px;
+    bottom: 32px;
+}
