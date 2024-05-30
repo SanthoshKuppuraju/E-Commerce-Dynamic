@@ -1,0 +1,83 @@
+/* For the container of the product  */
+.wholecart {
+    background-color: rgb(234, 243, 247);
+    padding: 25px 30px 20px 20px;
+
+
+}
+
+.cartproductimg {
+    height: 150px;
+    width: 150px;
+}
+
+.cartdetails h5 {
+    position: relative;
+    top: 30px;
+}
+
+.cartdetails {
+    display: flex;
+    gap: 30px;
+}
+
+/* For the container of the cart product  */
+.cartproduct {
+
+    margin-left: 50px;
+    width: 700px;
+    height: 150px;
+    background-color: white;
+}
+
+/* For the right hand side of the cart summary  */
+.cartsummary {
+    height: 150px;
+    width: 300px;
+    background-color: white;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 410px;
+    left: 1050px;
+}
+
+.cartsummary h4 {
+
+    padding: 3px;
+    box-shadow: 0px 1px 0.5px 0.5px rgb(232, 228, 228);
+    color: rgb(35, 26, 131);
+    font-size: 18px;
+    margin-bottom: 15px;
+
+}
+
+.cartsummary h5 {
+    color: rgb(35, 26, 131);
+
+}
+
+
+/* For the empty cart */
+.emptycart {
+    margin: 20px;
+    font-size: 20px;
+    color: rgb(35, 26, 131);
+}
+
+/* For the remove button  */
+.removebutton {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border: 0px;
+    margin: 5px;
+    position: absolute;
+    left: 721px;
+
+
+}
+
+.removebutton img {
+    height: 30px;
+    width: 30px;
+}
