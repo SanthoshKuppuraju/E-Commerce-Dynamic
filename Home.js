@@ -8,6 +8,8 @@ import { serviceData } from "./Product.js";
 import { discoutProducts } from "./Product.js";
 import { products } from "./Product.js";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { add } from "./CartSlice";
 
 const Home = () => {
   // for carosal function
@@ -22,6 +24,11 @@ const Home = () => {
   );
   // Filtering the data for the best Sales
   const bestSales = products.filter((item) => item.category == "sofa");
+  // to dispatch the data while clicking rthe add to cart button
+  const dispatch = useDispatch(); // to dispatch the product data to the slice
+  const handelAdd = (item) => {
+    dispatch(add(item));
+  };
 
   return (
     <>
@@ -81,7 +88,13 @@ const Home = () => {
                 </div>
                 <h5>INR: {item.price}</h5>
 
-                <button>+</button>
+                <button
+                  onClick={() => {
+                    handelAdd(item);
+                  }}
+                >
+                  +
+                </button>
               </div>
             ))}
           </div>
@@ -93,7 +106,9 @@ const Home = () => {
             <div className="bgproducts">
               {newArraivals.map((item) => (
                 <div className="bgitems">
-                  <img src={item.imgUrl} className="bgproductsimg" />
+                  <Link to={`/productpage/${item.id}`}>
+                    <img src={item.imgUrl} className="bgproductsimg" />
+                  </Link>
                   <h5>{item.productName}</h5>
                   <div className="bgstarscontainer">
                     <img src={item.star} className="bgproductsstar" />
@@ -104,7 +119,13 @@ const Home = () => {
                   </div>
                   <h5>INR: {item.price}</h5>
 
-                  <button>+</button>
+                  <button
+                    onClick={() => {
+                      handelAdd(item);
+                    }}
+                  >
+                    +
+                  </button>
                 </div>
               ))}
             </div>
@@ -116,7 +137,9 @@ const Home = () => {
           <div className="bgproducts">
             {bestSales.map((item) => (
               <div className="bgitems">
-                <img src={item.imgUrl} className="bgproductsimg" />
+                <Link to={`/productpage/${item.id}`}>
+                  <img src={item.imgUrl} className="bgproductsimg" />
+                </Link>
                 <h5>{item.productName}</h5>
                 <div className="bgstarscontainer">
                   <img src={item.star} className="bgproductsstar" />
@@ -127,7 +150,13 @@ const Home = () => {
                 </div>
                 <h5>INR: {item.price}</h5>
 
-                <button>+</button>
+                <button
+                  onClick={() => {
+                    handelAdd(item);
+                  }}
+                >
+                  +
+                </button>
               </div>
             ))}
           </div>

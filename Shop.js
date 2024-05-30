@@ -1,17 +1,26 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import "./Shop.css";
 import { products } from "./Product";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import { useDispatch } from "react-redux";
+import { add } from "./CartSlice";
 
 const Shop = () => {
   const [data, setData] = useState(products); // inital state of the products
-  //   const categorys = data.map((item) => item.category);
-  const categories = data.map((item) => ({ category: item.category }));
-  const midstage = categories;
-  const category = new Set(midstage);
+  // const categories = data.map((item) => ({ category: item.category }));
+  const categories = [{ category: "sofa" }, { category: "mobile" }];
 
-  console.log(categories);
+  const reducer = (currentState, action) => {
+    console.log(action);
+  };
+
+  const [category, dispatch] = useReducer(reducer, data);
+  // to dispatch the data while clicking rthe add to cart button
+  const dispatchCart = useDispatch(); // to dispatch the product data to the slice
+  const handelAdd = (item) => {
+    dispatchCart(add(item));
+  };
 
   return (
     <>
@@ -23,10 +32,17 @@ const Shop = () => {
 
       <select className="catagerydropdown">
         <option> Filter by category </option>
-        {/* {array.map((item) => (
-          <option>{item}</option>
-        ))} */}
+        {categories.map((item) => (
+          <option>{item.category}</option>
+        ))}
       </select>
+      {/* <button
+        onClick={() => {
+          dispatch({ type: `MOBILE`, payLoad: 0 });
+        }}
+      >
+        Click me{" "}
+      </button> */}
 
       {/* Search Bar */}
       <div className="searchbar">
@@ -46,7 +62,7 @@ const Shop = () => {
       {/* For the Products */}
       <div className="smilarproductscontainer">
         <div className="similarproducts">
-          {data.map((item) => (
+          {category.map((item) => (
             <div className="similaritems">
               <Link to={`/productpage/${item.id}`}>
                 <img src={item.imgUrl} className="similarproductsimg" />
@@ -61,7 +77,13 @@ const Shop = () => {
               </div>
               <h5>INR: {item.price}</h5>
 
-              <button>+</button>
+              <button
+                onClick={() => {
+                  handelAdd(item);
+                }}
+              >
+                +
+              </button>
             </div>
           ))}
         </div>
