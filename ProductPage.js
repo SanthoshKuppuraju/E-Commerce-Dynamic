@@ -2,61 +2,77 @@ import React from "react";
 import { products } from "./Product";
 import { useParams, Link } from "react-router-dom";
 import "./ProductPage.css";
-import backgroung from "./Images/Productbg.png";
 import Footer from "./Footer";
+import { useDispatch } from "react-redux";
+import { add } from "./CartSlice";
 
 const ProductPage = () => {
   const { id } = useParams(); //for getting the product id which was from the home .
-  const product = products.filter((item) => item.id == id); // by the id from the use params we fliter that particular prd by filter method
-  const reviewsCount = product[0].reviews.length; // for give the number to the reviews
+
+  const product = products.find((item) => item.id == id); // by the id from the use params we fliter that particular prd by filter method
+
+  const reviewsCount = product.reviews.length; // for give the number to the reviews
   // to filter the simlar items of the clicked item
   const similardata = products.filter(
-    (item) => item.category == product[0].category
+    (item) => item.category == product.category
   );
   // to filter the items from the similar data expext that clicked item
   const similarproducts = similardata.filter((item) => item.id !== id); // we filtering the project which was not equal to that particular id
+  // to handel the add to cart ;;
+
+  const dispatch = useDispatch(); // to dispatch the product data to the slice
+  const handelAdd = (product) => {
+    dispatch(add(product));
+  };
 
   return (
     <>
       <div>
-        {product.map((item) => (
-          <div className="singleproduct">
-            <div className="headerportion">
-              <img src="https://images.pexels.com/photos/220116/pexels-photo-220116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-              <h1>{item.productName}</h1>
-            </div>
+        <div className="singleproduct">
+          <div className="headerportion">
+            <img src="https://images.pexels.com/photos/220116/pexels-photo-220116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            <h1>{product.productName}</h1>
+          </div>
 
-            <div className="producttop">
-              <img className="productimg" src={item.imgUrl} />
-              <div className="productdeatils">
-                <h3>{item.productName}</h3>
-                <div className="star">
-                  <img src={item.star} />
-                  <img src={item.star} />
-                  <img src={item.star} />
-                  <img src={item.star} />
-                  <img src={item.star} />
-                  <span>{item.avgRating} rating</span>
-                </div>
-                <div className="priceline">
-                  <h3>INR: {item.price}</h3>
-                  <p>category: {item.category}</p>
-                </div>
-                <p className="shortdesc">{item.shortDesc}</p>
-                <p className="productqnt">1</p>
-                <button className="addtocart">Add to Cart</button>
-              </div>
-            </div>
-            <div className="description">
-              <div className="deschead">
-                <h5>Description</h5>
+          <div className="producttop">
+            <img className="productimg" src={product.imgUrl} />
+            <div className="productdeatils">
+              <h3>{product.productName}</h3>
+              <div className="star">
+                <img src={product.star} alt="star" />
+                <img src={product.star} alt="star" />
+                <img src={product.star} alt="star" />
+                <img src={product.star} alt="star" />
+                <img src={product.star} alt="star" />
 
-                <p>Reviews({reviewsCount})</p>
+                <span>{product.avgRating} rating</span>
               </div>
-              <p>{item.description}</p>
+              <div className="priceline">
+                <h3>INR: {product.price}</h3>
+                <p>category: {product.category}</p>
+              </div>
+              <p className="shortdesc">{product.shortDesc}</p>
+              <input type="number" className="productquantity" />
+
+              <button
+                className="addtocart"
+                onClick={() => {
+                  handelAdd(product);
+                }}
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
-        ))}
+          <div className="description">
+            <div className="deschead">
+              <h5>Description</h5>
+
+              <p>Reviews({reviewsCount})</p>
+            </div>
+            <p>{product.description}</p>
+          </div>
+        </div>
       </div>
       {/* For the you might also like portion */}
       <h3 className="similarproductsheading">You Migth Also Like </h3>
@@ -77,7 +93,13 @@ const ProductPage = () => {
               </div>
               <h5>INR: {item.price}</h5>
 
-              <button>+</button>
+              <button
+                onClick={() => {
+                  handelAdd(item);
+                }}
+              >
+                +
+              </button>
             </div>
           ))}
         </div>
