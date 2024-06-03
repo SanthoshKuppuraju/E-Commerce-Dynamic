@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { products } from "./Product";
 import { useParams, Link } from "react-router-dom";
 import "./ProductPage.css";
 import Footer from "./Footer";
 import { useDispatch } from "react-redux";
 import { add } from "./CartSlice";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ProductPage = () => {
   const { id } = useParams(); //for getting the product id which was from the home .
 
@@ -19,10 +20,13 @@ const ProductPage = () => {
   // to filter the items from the similar data expext that clicked item
   const similarproducts = similardata.filter((item) => item.id !== id); // we filtering the project which was not equal to that particular id
   // to handel the add to cart ;;
+  const [added, setAdded] = useState(false);
 
   const dispatch = useDispatch(); // to dispatch the product data to the slice
   const handelAdd = (product) => {
     dispatch(add(product));
+    setAdded(true);
+    toast.success("Product has been added to cart ");
   };
 
   return (
@@ -52,7 +56,11 @@ const ProductPage = () => {
                 <p>category: {product.category}</p>
               </div>
               <p className="shortdesc">{product.shortDesc}</p>
-              <input type="number" className="productquantity" />
+              <input
+                type="number"
+                className="productquantity"
+                placeholder="1"
+              />
 
               <button
                 className="addtocart"
@@ -60,8 +68,9 @@ const ProductPage = () => {
                   handelAdd(product);
                 }}
               >
-                Add to Cart
+                {added ? "Added  ✓" : "Add to Cart"}
               </button>
+              <ToastContainer />
             </div>
           </div>
           <div className="description">
