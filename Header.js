@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const color = {
     color: "black",
   };
+  // to show the length of the cart
+  const lengthOfCart = useSelector((state) => state.cart);
+
   return (
     <>
       <div className="header">
@@ -28,18 +32,18 @@ const Header = () => {
               Home
             </Link>
           </li>
-          <li class="nav-item">
-            <Link to="/Shop" class="nav-link" style={color}>
+          <li className="nav-item">
+            <Link to="/Shop" className="nav-link" style={color}>
               Shop
             </Link>
           </li>
           <li class="nav-item">
-            <Link to="/cart" class="nav-link" style={color}>
+            <Link to="/cart" className="nav-link" style={color}>
               Cart
             </Link>
           </li>
 
-          <li class="nav-item">
+          <li className="nav-item">
             <Link to="/cart" href="#">
               <img
                 className="cartimg"
@@ -47,7 +51,7 @@ const Header = () => {
               />
             </Link>
           </li>
-          <li className="tolitmncrt">0</li>
+          <li className="tolitmncrt">{lengthOfCart.length}</li>
         </ul>
       </div>
     </>
