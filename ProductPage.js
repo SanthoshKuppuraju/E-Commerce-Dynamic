@@ -26,7 +26,7 @@ const ProductPage = () => {
   const handelAdd = (product) => {
     dispatch(add(product));
     setAdded(true);
-    toast.success("Product has been added to cart ");
+    toast.success("Product has been added to cart "); // for the message of product added in a cart
   };
 
   return (
