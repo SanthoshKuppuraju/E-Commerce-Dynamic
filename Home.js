@@ -10,6 +10,7 @@ import { products } from "./Product.js";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { add } from "./CartSlice";
+import { ToastContainer, toast } from "react-toastify";
 
 const Home = () => {
   // for carosal function
@@ -28,6 +29,7 @@ const Home = () => {
   const dispatch = useDispatch(); // to dispatch the product data to the slice
   const handelAdd = (item) => {
     dispatch(add(item));
+    toast.success("Product has been added to cart");
   };
 
   return (
@@ -87,14 +89,15 @@ const Home = () => {
                   <img src={item.star} className="bgproductsstar" />
                 </div>
                 <h5>INR: {item.price}</h5>
-
-                <button
-                  onClick={() => {
-                    handelAdd(item);
-                  }}
-                >
-                  +
-                </button>
+                <div>
+                  <button
+                    onClick={() => {
+                      handelAdd(item);
+                    }}
+                  >
+                    +
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -162,6 +165,7 @@ const Home = () => {
           </div>
         </div>
         {/* Added footer component to the home page */}
+        <ToastContainer />
         <Footer />
       </div>
     </>
