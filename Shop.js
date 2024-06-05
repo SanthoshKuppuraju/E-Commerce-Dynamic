@@ -10,27 +10,18 @@ import "./Shop.css";
 const Shop = () => {
   const shopProducts = products.filter((item) => item.category == "sofa");
   const [data, setData] = useState(shopProducts); // inital state of the products
-  // const categories = products.map((item) => ({ category: item.category }));
 
-  const categories = [
-    { category: "sofa" },
-    { category: "mobile" },
-    { category: "chair" },
-    { category: "watch" },
-    { category: "wireless" },
-  ];
+  // to make the set of quantity available;
+  const rawCategories = products.map((item) => item.category); //get all the categories from the api
+  const settedCategories = new Set(rawCategories); // make the categories into a set
+  const categories = Array.from(settedCategories); // changed the ssetted categories to array
 
-  // category filter  by the category
-  const reducer = (currentState, action) => {};
-
-  const handelFilter = () => {
-    setData(category);
+  // to filter the by selecting the category
+  const handelFilter = (event) => {
+    setData(products.filter((item) => item.category == event.target.value));
   };
 
-  const [category, dispatch] = useReducer(reducer, data);
-  // filter the data by category
-
-  // to dispatch the data while clicking rthe add to cart button
+  // to dispatch the data while clicking the add to cart button
   const dispatchCart = useDispatch(); // to dispatch the product data to the slice
   const handelAdd = (item) => {
     dispatchCart(add(item));
@@ -55,17 +46,9 @@ const Shop = () => {
       </div>
       <p className="intermediateline">|</p>
 
-      <select className="catagerydropdown">
-        <option> Filter by category </option>
+      <select className="catagerydropdown" onChange={handelFilter}>
         {categories.map((item) => (
-          <option
-            onClick={() => {
-              handelFilter();
-              dispatch({ type: `${item.category.toUpperCase()}` });
-            }}
-          >
-            {item.category}
-          </option>
+          <option>{item}</option>
         ))}
       </select>
 
@@ -89,7 +72,7 @@ const Shop = () => {
       <div className="smilarproductscontainer">
         <div className="similarproducts">
           {searchedProduct && searchedProduct.length < 0
-            ? category.map((item) => (
+            ? data.map((item) => (
                 <div className="similaritems">
                   <Link to={`/productpage/${item.id}`}>
                     <img src={item.imgUrl} className="similarproductsimg" />
