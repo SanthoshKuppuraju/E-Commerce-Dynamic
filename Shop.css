@@ -21,18 +21,24 @@
     background-color: rgb(35, 26, 131);
     color: white;
     border-radius: 5px;
+    width: 170px;
 
+}
+
+.catagerydropdown:focus {
+    outline: none;
 }
 
 .catagerydropdown option {
     background-color: rgb(253, 253, 253);
-    padding: 15px;
     color: rgb(0, 0, 0);
     height: 100px;
 
 
 
 }
+
+
 
 
 

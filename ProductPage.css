@@ -73,11 +73,15 @@
     width: 500px;
 }
 
-.productqnt {
-    display: inline;
-    padding: 1px 60px 2px 10px;
+.productquantity {
     border: 1px solid;
     border-radius: 5px;
+    width: 70px;
+
+}
+
+.productquantity:focus {
+    outline: none;
 }
 
 /* for add to cart button  */

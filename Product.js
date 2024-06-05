@@ -337,10 +337,6 @@ export const products = [
         rating: 4.6,
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
-      {
-        rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
     ],
     avgRating: 4.7,
   },

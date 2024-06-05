@@ -5,7 +5,7 @@ const Footer = () => {
     <>
       <div className="footer">
         <div className="foot1">
-          <img src="https://cdn3.iconfinder.com/data/icons/basic-web-elements/48/basket-64.png" />
+          <img src=" https://cdn3.iconfinder.com/data/icons/basic-web-elements/48/basket-64.png" />
           <ul className="footerdiv1">
             <li className="foothead">Mart</li>
             <li>
