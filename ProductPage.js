@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import { useDispatch } from "react-redux";
 import { add } from "./CartSlice";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 const ProductPage = () => {
   const { id } = useParams(); //for getting the product id which was from the home .
 
@@ -52,7 +52,7 @@ const ProductPage = () => {
                 <span>{product.avgRating} rating</span>
               </div>
               <div className="priceline">
-                <h3>INR: {product.price}</h3>
+                <h3>$ {product.price}</h3>
                 <p>category: {product.category}</p>
               </div>
               <p className="shortdesc">{product.shortDesc}</p>
@@ -100,7 +100,7 @@ const ProductPage = () => {
                 <img src={item.star} className="similarproductstar" />
                 <img src={item.star} className="similarproductstar" />
               </div>
-              <h5>INR: {item.price}</h5>
+              <h5>$ {item.price}</h5>
 
               <button
                 onClick={() => {

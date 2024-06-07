@@ -13,7 +13,7 @@ import { add } from "./CartSlice";
 import { ToastContainer, toast } from "react-toastify";
 
 const Home = () => {
-  // for carosal function
+  // for carousel function
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex) => {
@@ -88,7 +88,7 @@ const Home = () => {
                   <img src={item.star} className="bgproductsstar" />
                   <img src={item.star} className="bgproductsstar" />
                 </div>
-                <h5>INR: {item.price}</h5>
+                <h5>$ {item.price}</h5>
                 <div>
                   <button
                     onClick={() => {
@@ -165,8 +165,9 @@ const Home = () => {
           </div>
         </div>
         {/* Added footer component to the home page */}
-        <ToastContainer />
         <Footer />
+        {/* toast container to show the msg while adding the product to the cart  */}
+        <ToastContainer />
       </div>
     </>
   );

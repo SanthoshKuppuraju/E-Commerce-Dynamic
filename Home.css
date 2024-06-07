@@ -29,10 +29,7 @@
 /* For the cards under the Carosule */
 .cardsundercar {
     display: flex;
-    /* background-color: rgb(244, 243, 243); */
-    background-color: rgb(225,
-            231,
-            232);
+    background-color: rgb(225, 231, 232);
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 45px;

@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useState } from "react";
 import { products } from "./Product";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
@@ -85,7 +85,7 @@ const Shop = () => {
                     <img src={item.star} className="similarproductstar" />
                     <img src={item.star} className="similarproductstar" />
                   </div>
-                  <h5>INR: {item.price}</h5>
+                  <h5>$ {item.price}</h5>
 
                   <button
                     onClick={() => {
@@ -109,7 +109,7 @@ const Shop = () => {
                     <img src={item.star} className="similarproductstar" />
                     <img src={item.star} className="similarproductstar" />
                   </div>
-                  <h5>INR: {item.price}</h5>
+                  <h5>$ {item.price}</h5>
 
                   <button
                     onClick={() => {

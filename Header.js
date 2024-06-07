@@ -7,8 +7,8 @@ const Header = () => {
   const color = {
     color: "black",
   };
-  // to show the length of the cart
-  const lengthOfCart = useSelector((state) => state.cart);
+  // to show the total items in the cart
+  const lengthOfCart = useSelector((state) => state.cart.items);
 
   return (
     <>
